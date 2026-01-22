@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import Navbar from "./Components/Navbar";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Footer from "./Components/Footer";
+import Footer from "./components/Footer";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";

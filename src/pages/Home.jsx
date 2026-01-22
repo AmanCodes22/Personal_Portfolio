@@ -1,5 +1,5 @@
 import { Code } from 'lucide-react';
-import Button from '../Components/Button';
+import Button from '../components/Button';
 import { profile } from '../data/skills';
 import './Home.css';
 

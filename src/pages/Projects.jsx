@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import SectionTitle from '../components/SectionTitle';
-import ProjectCard from '../Components/Projectcard';
+import ProjectCard from '../components/Projectcard';
 import { projects } from '../data/projects';
 import './Projects.css';
 

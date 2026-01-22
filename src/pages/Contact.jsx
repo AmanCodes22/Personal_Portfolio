@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Mail, Github, Linkedin, Instagram, Send } from 'lucide-react';
-import SectionTitle from '../Components/Sectiontitle';
+import SectionTitle from '../components/Sectiontitle';
 import { profile } from '../data/skills';
 import './Contact.css';
 

@@ -1,5 +1,5 @@
 import SectionTitle from '../components/SectionTitle';
-import SkillBadge from '../Components/Skillbadge';
+import SkillBadge from '../components/Skillbadge';
 import { skills } from '../data/skills';
 import './Skills.css';
 
