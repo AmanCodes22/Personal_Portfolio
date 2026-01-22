@@ -1,5 +1,5 @@
 import { Github, ExternalLink } from 'lucide-react';
-import './ProjectCard.css';
+import './Projectcard.css';
 
 function ProjectCard({ project, theme }) {
   return (
