@@ -1,0 +1,23 @@
+/* Base styles (same for all) */
+.skill-badge {
+  padding: 8px 16px;        /* px-4 py-2 */
+  border-radius: 8px;      /* rounded-lg */
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Light mode */
+.skill-badge.light {
+  background-color: #f9fafb;  /* gray-50 */
+  border-color: #e5e7eb;      /* gray-200 */
+  color: #1f2937;             /* gray-800 */
+}
+
+/* Dark mode */
+.skill-badge.dark {
+  background-color: #1f2937;  /* gray-800 */
+  border-color: #374151;      /* gray-700 */
+  color: #e5e7eb;             /* gray-200 */
+}

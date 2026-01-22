@@ -1,0 +1,86 @@
+/* =========================
+   WRAPPER
+========================= */
+.skills-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.dark-app .skills-wrapper {
+  background-color: #111827;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.skills-container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 80px 16px;
+  color: #111827;
+}
+
+.dark-app .skills-container {
+  color: #ffffff;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* =========================
+   CARD SECTIONS
+========================= */
+.skills-card {
+  background-color: #f9fafb;
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.dark-app .skills-card {
+  background-color: #1f2937;
+}
+
+/* Highlight learning section */
+.skills-highlight {
+  padding: 32px;
+  border-left: 4px solid #3b82f6;
+  background-color: #eff6ff;
+  border-radius: 16px;
+}
+
+.dark-app .skills-highlight {
+  background-color: #1e3a8a;
+  border-color: #60a5fa;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+.skills-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* =========================
+   GRID
+========================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

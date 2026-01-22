@@ -1,0 +1,127 @@
+/* Navbar base */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Themes */
+.navbar.light {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.navbar.dark {
+  background-color: #111827;
+  color: #ffffff;
+}
+.navbar.dark .icon-btn {
+  color: #ffffff;
+}
+
+.navbar.light .icon-btn {
+  color: #111827;
+}
+
+
+/* Container */
+.navbar-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 16px;
+}
+
+/* Inner */
+.navbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+/* Logo */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #3b82f6;
+}
+
+/* Buttons */
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.navbar.light .icon-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.navbar.dark .icon-btn:hover {
+  background-color: #1f2937;
+}
+
+/* Mobile */
+.mobile-buttons {
+  display: none;
+  gap: 16px;
+}
+
+/* Mobile menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  padding: 16px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.navbar.dark .mobile-menu {
+  border-color: #374151;
+}
+
+.mobile-menu a {
+  padding: 8px 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.mobile-menu a:hover {
+  color: #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-buttons {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}

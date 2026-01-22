@@ -1,0 +1,119 @@
+/* =========================
+   CARD BASE
+========================= */
+.project-card {
+  border-radius: 12px;
+  border: 1px solid;
+  padding: 24px;
+  transition: box-shadow 0.2s;
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Light mode */
+.project-card.light {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+/* Dark mode */
+.project-card.dark {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+/* =========================
+   TITLE
+========================= */
+.project-title {
+  font-size: 20px;        /* text-xl */
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+.project-description {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #4b5563;
+}
+
+.project-card.dark .project-description {
+  color: #d1d5db;
+}
+
+/* =========================
+   TECH BADGES
+========================= */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tech-badge {
+  font-size: 13px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+/* Light */
+.tech-badge.light {
+  background-color: #dbeafe;  /* blue-100 */
+  color: #1d4ed8;             /* blue-700 */
+}
+
+/* Dark */
+.tech-badge.dark {
+  background-color: #374151;  /* gray-700 */
+  color: #60a5fa;             /* blue-400 */
+}
+
+/* =========================
+   LINKS
+========================= */
+.project-links {
+  display: flex;
+  gap: 16px;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+/* Code link */
+.project-link.light {
+  color: #374151;
+}
+
+.project-link.light:hover {
+  color: #000000;
+}
+
+.project-link.dark {
+  color: #d1d5db;
+}
+
+.project-link.dark:hover {
+  color: #ffffff;
+}
+
+/* Demo link */
+.project-link.demo {
+  color: #3b82f6;
+}
+
+.project-link.demo:hover {
+  color: #2563eb;
+}

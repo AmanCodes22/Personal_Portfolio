@@ -1,0 +1,155 @@
+/* =========================
+   WRAPPER & CONTAINER
+========================= */
+.contact-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.dark-app .contact-wrapper {
+  background-color: #111827;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 64px 16px;
+  color: #111827;
+}
+
+.dark-app .contact-container {
+  color: #ffffff;
+}
+
+/* =========================
+   GRID
+========================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   HEADINGS
+========================= */
+.contact-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   LINKS
+========================= */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #4b5563;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: #3b82f6;
+}
+
+.dark-app .contact-link {
+  color: #d1d5db;
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+.contact-success {
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.dark-app .contact-success {
+  background-color: #14532d;
+  color: #bbf7d0;
+}
+
+/* =========================
+   FORM
+========================= */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs */
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid;
+  font-size: 15px;
+}
+
+/* Light mode input */
+.form-input.light {
+  background-color: #ffffff;
+  border-color: #d1d5db;
+  color: #111827;
+}
+
+/* Dark mode input */
+.form-input.dark {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #ffffff;
+}
+
+/* Focus */
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.4);
+}
+
+/* Button */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.contact-btn:hover {
+  background-color: #2563eb;
+}

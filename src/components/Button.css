@@ -1,0 +1,43 @@
+
+.btn {
+  padding: 12px 24px;            
+  border-radius: 8px;             
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+
+.btn:hover {
+  transform: scale(1.05);         
+}
+
+
+.btn-primary {
+  background-color: #3b82f6;      
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;      
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;       
+  color: #1f2937;                  
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;       /* gray-300 */
+}
+
+/* SECONDARY BUTTON (Dark mode) */
+.dark-app .btn-secondary {
+  background-color: #374151;       /* gray-700 */
+  color: #e5e7eb;                  /* gray-200 */
+}
+
+.dark-app .btn-secondary:hover {
+  background-color: #4b5563;       /* gray-600 */
+}

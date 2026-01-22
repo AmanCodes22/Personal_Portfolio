@@ -1,0 +1,138 @@
+
+.projects-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.dark-app .projects-wrapper {
+  background-color: #111827;
+}
+
+
+.projects-container {
+  max-width: 1152px;
+  margin: auto;
+  padding: 80px 16px;
+  color: #111827;
+}
+
+.dark-app .projects-container {
+  color: #ffffff;
+}
+
+
+.projects-stats {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 32px;
+  color: #2563eb;
+}
+
+.dark-app .projects-stats {
+  color: #93c5fd;
+}
+
+
+.projects-filters {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background-color: #eff6ff;
+}
+
+.filter-btn.active {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+
+.dark-app .filter-btn {
+  border-color: #374151;
+}
+
+.dark-app .filter-btn:hover {
+  background-color: #1f2937;
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  animation: fadeUp 0.6s ease;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+.projects-cta {
+  margin-top: 80px;
+  padding: 48px 24px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: #eff6ff;
+}
+
+.projects-cta h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.projects-cta p {
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: #374151;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-btn:hover {
+  background-color: #2563eb;
+}
+
+.dark-app .projects-cta {
+  background-color: #1e3a8a;
+}
+
+.dark-app .projects-cta p {
+  color: #d1d5db;
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

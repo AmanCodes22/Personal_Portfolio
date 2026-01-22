@@ -1,0 +1,33 @@
+/* Wrapper */
+.section-title {
+  text-align: center;
+  margin-bottom: 48px; /* mb-12 */
+}
+
+/* Heading */
+.section-title-heading {
+  font-size: 30px;      /* text-3xl */
+  font-weight: 700;     /* font-bold */
+  margin-bottom: 12px;  /* mb-3 */
+}
+
+/* Responsive heading */
+@media (min-width: 768px) {
+  .section-title-heading {
+    font-size: 36px;    /* md:text-4xl */
+  }
+}
+
+/* Subtitle */
+.section-title-subtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 640px;     /* max-w-2xl */
+  margin: 0 auto;
+  color: #4b5563;      /* gray-600 */
+}
+
+/* Dark mode subtitle */
+.dark-app .section-title-subtitle {
+  color: #9ca3af;      /* gray-400 */
+}
