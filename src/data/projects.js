@@ -5,15 +5,15 @@ export const projects = [
     description: "A responsive portfolio website showcasing my projects and skills, built with React and CSS.",
     tech: ["React", "CSS", "JavaScript"],
     github: "https://github.com/AmanCodes22/portfolio",
-    demo: "https://demo-link.com"
+    demo: "aman-22-portfolio.netlify.app"
   },
   {
     id: 2,
-    title: "Weather Dashboard",
-    description: "Real-time weather app using public API, demonstrating API integration and conditional rendering.",
-    tech: ["React", "API", "Tailwind CSS"],
-    github: "https://github.com/AmanCodes22/weather-app",
-    demo: "https://demo-link.com"
+    title: "MyYummyBook App",
+    description: "A Food Recipe application that allows users to browse, favorite, and manage recipes using Supabase as the backend.",
+    tech: ["React", "Supabase", "CSS"],
+    github: "https://github.com/AmanCodes22/Food_Recipe_website",
+    demo: "myyummybook.netlify.app"
   },
   {
     id: 3,
