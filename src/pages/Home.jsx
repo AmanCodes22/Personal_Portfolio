@@ -27,7 +27,7 @@ function Home() {
 
         {/* Strong intro */}
         <p className="home-intro">
-         {profile.intro}
+          {profile.intro}
         </p>
 
         {/* Proof / stats */}
@@ -40,9 +40,16 @@ function Home() {
           <Button to="/projects" variant="primary">
             View My Work
           </Button>
-          <Button to="/contact" variant="secondary">
-            Contact Me
-          </Button>
+
+          <a
+  href="/Aman's_Resume.pdf"
+  download
+  className="btn btn-secondary"
+>
+  Download Resume
+</a>
+
+
         </div>
 
         {/* Availability note */}
