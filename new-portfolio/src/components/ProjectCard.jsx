@@ -7,13 +7,34 @@ import {
   MessageSquare,
   BarChart3,
   Globe,
+  Hotel,
+  Film,
+  Car,
+  Monitor,
+  Laptop,
+  BrainCircuit,
+  Utensils,
+  MessageSquareWarning,
 } from 'lucide-react';
 
 const iconMap = {
-  ScanHeart: HeartPulse, Brain, Hand, MessageSquare, BarChart3, Globe,
+  ScanHeart: HeartPulse,
+  Brain,
+  Hand,
+  MessageSquare,
+  MessageSquareWarning,
+  BarChart3,
+  Globe,
+  Hotel,
+  Film,
+  Car,
+  Monitor,
+  Laptop,
+  BrainCircuit,
+  Utensils,
 };
 
-export default function ProjectCard({ project, index }) {
+export default function ProjectCard({ project, index, onSelect }) {
   const Icon = iconMap[project.icon] || Globe;
 
   return (
@@ -23,10 +44,11 @@ export default function ProjectCard({ project, index }) {
       viewport={{ once: true, margin: '-50px' }}
       transition={{ delay: (index % 3) * 0.15, duration: 0.5 }}
       whileHover={{ y: -8 }}
-      className={`group relative rounded-2xl card-bg border overflow-hidden transition-colors ${
+      onClick={() => onSelect && onSelect(project)}
+      className={`group relative rounded-2xl card-bg border overflow-hidden transition-all cursor-pointer ${
         project.featured
           ? 'border-accent-purple/40 glow-purple'
-          : 'border-base hover:border-accent-purple/30'
+          : 'border-base hover:border-accent-purple/40'
       }`}
     >
       {/* Image */}
@@ -50,8 +72,12 @@ export default function ProjectCard({ project, index }) {
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="font-display text-lg font-bold mb-2 group-hover:gradient-text transition-all">{project.title}</h3>
-        <p className="text-secondary text-xs leading-relaxed mb-4">{project.description}</p>
+        <h3 className="font-display text-lg font-bold mb-2 group-hover:text-accent-purple transition-colors">
+          {project.title}
+        </h3>
+        <p className="text-secondary text-xs leading-relaxed mb-4 line-clamp-2">
+          {project.description}
+        </p>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5 mb-4">
@@ -66,7 +92,7 @@ export default function ProjectCard({ project, index }) {
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 pt-1" onClick={(e) => e.stopPropagation()}>
           <a
             href={project.github}
             target="_blank"

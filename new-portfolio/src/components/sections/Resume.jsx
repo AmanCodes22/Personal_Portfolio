@@ -30,12 +30,13 @@ export default function Resume() {
               <p className="text-accent-purple text-sm font-medium">{resume.degree}</p>
             </div>
             <a
-              href={personal.resumeUrl}
-              download
-              className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-accent-purple to-accent-blue text-white text-sm font-medium hover:opacity-90 transition-opacity"
+               href="/resume.pdf"
+                download="Aman_Singhal_Resume.pdf"
+               className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-accent-purple to-accent-blue text-white text-sm font-medium hover:opacity-90 transition-opacity"
             >
-              <Download size={16} /> Download Resume
-            </a>
+                  <Download size={16} />
+                       Download Resume
+                   </a>
           </div>
 
           {/* Contact info */}

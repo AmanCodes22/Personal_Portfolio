@@ -1,10 +1,13 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Rocket } from 'lucide-react';
 import { portfolioData } from '@/data/portfolioData';
 import ProjectCard from '@/components/ProjectCard';
+import ProjectModal from '@/components/ProjectModal';
 
 export default function Projects() {
   const { projects } = portfolioData;
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <section id="projects" className="section-padding relative overflow-hidden">
@@ -22,16 +25,31 @@ export default function Projects() {
             <h2 className="font-display text-4xl sm:text-5xl font-bold">My Projects</h2>
           </div>
           <p className="text-secondary text-sm max-w-xl mx-auto">
-            A collection of my major works — blending research, AI innovation.
+            A collection of my major works — blending research, AI innovation. Click any project to view full details.
           </p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
-            <ProjectCard key={project.title} project={project} index={i} />
+            <ProjectCard
+              key={project.title}
+              project={project}
+              index={i}
+              onSelect={setSelectedProject}
+            />
           ))}
         </div>
       </div>
+
+      {/* Project Details Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <ProjectModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

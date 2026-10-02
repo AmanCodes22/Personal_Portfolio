@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   Newspaper,
   ArrowRight,
@@ -8,6 +9,7 @@ import {
 } from 'lucide-react';
 
 import { portfolioData } from '@/data/portfolioData';
+import ArticleModal from '@/components/ArticleModal';
 
 /* =========================================================
    ANIMATION VARIANTS
@@ -71,6 +73,7 @@ const cardItem = {
 
 export default function Blog() {
   const { blogs } = portfolioData;
+  const [selectedArticle, setSelectedArticle] = useState(null);
 
   return (
     <section
@@ -298,6 +301,7 @@ export default function Blog() {
                 stiffness: 250,
                 damping: 20,
               }}
+              onClick={() => setSelectedArticle(blog)}
               className="
                 group
                 relative
@@ -309,6 +313,7 @@ export default function Blog() {
                 hover:border-accent-purple/40
                 transition-colors
                 duration-300
+                cursor-pointer
               "
             >
               {/* =================================================
@@ -529,6 +534,10 @@ export default function Blog() {
                     whileHover={{
                       x: 3,
                     }}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedArticle(blog);
+                    }}
                     className="
                       flex
                       items-center
@@ -630,6 +639,16 @@ export default function Blog() {
           </p>
         </motion.div>
       </div>
+
+      {/* Complete Article Reading Modal */}
+      <AnimatePresence>
+        {selectedArticle && (
+          <ArticleModal
+            article={selectedArticle}
+            onClose={() => setSelectedArticle(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }
